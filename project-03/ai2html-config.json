@@ -1,0 +1,22 @@
+{
+    "fonts": [
+        {
+            "aifont": "Phosphate-Solid",
+            "family": "Phosphate",
+            "weight": "700",
+            "style": ""
+        },
+        {
+            "aifont": "Phosphate-Inline",
+            "family": "Phosphate",
+            "weight": "400",
+            "style": ""
+        },
+        {
+            "aifont": "HelveticaNeue",
+            "family": "Helvetica Neue",
+            "weight": "400",
+            "style": ""
+        }
+    ]
+}
