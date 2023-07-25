@@ -1,0 +1,1055 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <style>
+        body {
+            margin:auto;
+            padding:50px 10px;
+            font-family: 'Pangolin', cursive;
+        }
+        .cursive {
+            font-family: 'Pangolin', cursive;
+        }
+        .serif {
+            font-family: 'Lora', serif;
+        }
+        .sans-serif {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        /* choose a light or dark theme to add to the body tag. */
+        .dark-theme {
+            background-color: #000000;
+            color: #fbfbfb;
+        }
+        .light-theme {
+            background-color: white;
+            color: black;
+        }
+
+        .header {
+            padding-top:20px;
+            padding-bottom:20px;
+        }
+
+        .story-body, .header, .chart-section, .footer {
+            margin:auto;
+            max-width: 700px;
+        }
+
+        .footer {
+            padding-top:20px;
+            padding-bottom:20px;
+        }
+
+        .chart-section.wide{
+            width:100%;
+            max-width:1200px;
+        }
+
+        .chart-section.wide p.chart-title {
+            width:100%;
+            max-width:700px;
+            margin-left:auto;
+            margin-right:auto;
+        }
+        .chart-section.wide p.chart-subhead {
+            width:100%;
+            max-width:700px;
+            margin-left:auto;
+            margin-right:auto;
+        }
+
+
+        /* text styles */
+
+        p.kicker {
+            font-size:1rem;
+            text-transform:uppercase;
+        }
+
+        .text-center {
+            text-align:center;
+        }
+
+        h1.headline {
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 0.25rem;
+            margin-top: 1rem;
+            font-weight: 800;
+        }
+
+        h2.subhead {
+            font-size: 1.4rem;
+            line-height: 2rem;
+            margin-bottom:0;
+            margin-top: 15px;
+            font-weight: 400;
+        }
+
+        p.body-text {
+            font-size: 1.1rem;
+            line-height: 1.4;
+            margin-top:0;
+            margin-bottom:15px;
+        }
+
+        h3.section-head {
+            font-size:2rem;
+            margin:40px 0 10px 0;
+            font-weight:700;
+            line-height:1.3;
+        }
+
+        .byline {
+            font-size: 1.1rem;
+            line-height: 0.75;
+            margin-top: 1.5rem;
+            font-weight: 500;
+        }
+
+        .date {
+            font-size: 0.85rem;
+            line-height: 1;
+            margin-top: 10px;
+            font-weight:400;
+            text-transform:uppercase;
+            letter-spacing:0.5px;
+        }
+
+
+        p.note {
+            font-size:0.85rem;
+        }
+
+        /* chart styles */
+
+        .chart-section {
+            width:100%;
+            max-width:1200px;
+            padding:20px 0px;
+        }
+
+        .story-body .chart-section {
+            padding-top:0px;
+        }
+
+
+        .chart-row {
+            display:flex;
+            justify-content: space-between;
+            margin-top:20px;
+        }
+
+        p.chart-title {
+            font-size:1.3rem;
+            font-weight:700;
+            max-width:700px;
+            margin:0px auto 5px auto;
+        }
+        p.chart-subhead {
+            margin:0 auto;
+            max-width:700px;
+            font-size:1rem;
+            margin-bottom:15px;
+        }
+
+        p.chart-label {
+            margin:0 0 5px 0;
+            font-size:0.85rem;
+            text-transform:uppercase;
+            font-weight:600;
+        }
+
+        .chart-row .chart {
+            width:100%;
+            padding-right:15px;
+            min-width:calc(25% - 15px);
+
+        }
+
+
+
+        p.chart-source {
+            font-size:0.85rem;
+            margin:0;
+        }
+
+
+
+
+
+        /* photos */
+
+        .photo-section {
+            padding:30px 0px;
+            width:100%;
+            margin:auto;
+            display:flex;
+            max-width:1200px;
+        }
+
+        .photo {
+            width:100%;
+            padding-right:15px;
+        }
+        .photo img {
+            width:100%;	
+        }
+
+        p.caption {
+            font-size:0.9rem;
+            margin:0;
+        }
+
+
+
+        /* mobile */
+
+        @media (max-width:700px) {
+
+            .chart-row {
+                display:block;
+            }
+
+            .chart-row .chart {
+                padding:0;
+            }
+
+            .photo-section {
+                display:block;
+            }
+            .photo {
+                padding:0;
+            }
+
+        }
+    </style>
+    <style>
+        /* These are the styles for ai2html */
+        
+        #g-skateboard-laptop, #g-skateboard-medium, #g-skateboard-mobile {
+            display: none;
+        }
+
+        @media (max-width: 490px) {
+            #g-skateboard-mobile {
+                display: block;
+            }
+        }
+
+        @media (min-width: 490px) and (max-width: 620px) {
+            #g-skateboard-laptop {
+                display: block;
+            }
+        }
+
+        @media (min-width: 620px)  {
+            #g-skateboard-medium {
+                display: block;
+            }
+        }
+
+    </style>
+    <style>
+        /* These are the styles for ai2html */
+            
+        #g-screenshot-laptop, #g-screenshot-medium, #g-screenshot-mobile {
+                display: none;
+        }
+    
+        @media (max-width: 490px) {
+                #g-screenshot-mobile {
+                    display: block;
+                }
+        }
+    
+        @media (min-width: 490px) and (max-width: 620px) {
+                #g-screenshot-laptop {
+                    display: block;
+                }
+        }
+    
+        @media (min-width: 620px)  {
+                #g-screenshot-medium {
+                    display: block;
+                }
+        }
+    
+    </style>
+    <style>
+         /* These are the styles for ai2html */
+                
+        #g-chart1-laptop, #g-chart1-medium, #g-chart1-mobile {
+                    display: none;
+        }
+        
+        @media (max-width: 490px) {
+                    #g-chart1-mobile {
+                        display: block;
+                    }
+        }
+        
+        @media (min-width: 490px) and (max-width: 620px) {
+                    #g-chart1-laptop {
+                        display: block;
+                    }
+        }
+        
+        @media (min-width: 620px)  {
+                    #g-chart1-medium {
+                        display: block;
+                    }
+        }
+        
+    </style>
+    <style>
+        /* These are the styles for ai2html */
+            
+        #g-chart2-laptop, #g-chart2-medium, #g-chart2-mobile {
+            display: none;
+        }
+    
+        @media (max-width: 490px) {
+            #g-chart2-mobile {
+                    display: block;
+            }
+        }
+    
+        @media (min-width: 490px) and (max-width: 620px) {
+            #g-chart2-laptop {
+                    display: block;
+            }
+        }
+    
+        @media (min-width: 620px)  {
+            #g-chart2-medium {
+                    display: block;
+            }
+        }
+    
+    </style>
+    
+    <!-- google fonts: Open Sans (sans-serif) and Lora (serif) -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+      
+    <title>Professional Skaters Want You to Buy Their Decks & Shoes</title>
+  </head>
+
+  <body class="dark-theme"> <!-- all of the content on your html page goes inside the body -->
+
+    <div class="header">
+      <p class="kicker">Link to Git Hub Repository</p>
+      <h1 class="headline">Professional Skaters Want You to Buy Their Decks & Shoes</h1>
+      <h2 class="subhead">Looking through sponsporship promotion habits for 100 professional skateboarders on social media</h2>
+      <p class="byline">By Niall Simonian</p>
+      <p class="date">Published July 24, 2023</p>
+    </div>
+
+    <div class="story-body">
+      <p class="body-text cursive">The world of professional skateboarding is unlike any other global sport of its scale.</p>
+      <p class="body-text cursive">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+
+    <div class="chart-section">
+        <div class="chart-row">
+          <div class="chart">
+
+
+
+
+            <!--- PASTE YOUR AI2HTML AFTER THIS LINE -->
+            <style media="screen,print">
+                #g-skateboard-box ,
+                #g-skateboard-box .g-artboard {
+                    margin:0 auto;
+                }
+                #g-skateboard-box p {
+                    margin:0;
+                }
+                #g-skateboard-box .g-aiAbs {
+                    position:absolute;
+                }
+                #g-skateboard-box .g-aiImg {
+                    position:absolute;
+                    top:0;
+                    display:block;
+                    width:100% !important;
+                }
+                #g-skateboard-box .g-aiSymbol {
+                    position: absolute;
+                    box-sizing: border-box;
+                }
+                #g-skateboard-box .g-aiPointText p { white-space: nowrap; }
+                #g-skateboard-medium {
+                    position:relative;
+                    overflow:hidden;
+                }
+                #g-skateboard-medium p {
+                    font-family:Phosphate;
+                    font-weight:700;
+                    line-height:24px;
+                    opacity:1;
+                    letter-spacing:0em;
+                    font-size:20px;
+                    text-align:left;
+                    color:rgb(255,255,255);
+                    text-transform:none;
+                    padding-bottom:0;
+                    padding-top:0;
+                    mix-blend-mode:normal;
+                    font-style:normal;
+                    height:auto;
+                    position:static;
+                }
+                #g-skateboard-medium .g-pstyle0 {
+                    font-family:arial,helvetica,sans-serif;
+                    font-weight:bold;
+                    line-height:58px;
+                    height:58px;
+                    font-size:48px;
+                    color:rgb(0,0,0);
+                }
+                #g-skateboard-medium .g-pstyle1 {
+                    font-size:15px;
+                    text-align:right;
+                }
+                #g-skateboard-medium .g-pstyle2 {
+                    text-align:right;
+                }
+                #g-skateboard-medium .g-cstyle0 {
+                    font-size:20px;
+                }
+                #g-skateboard-laptop {
+                    position:relative;
+                    overflow:hidden;
+                }
+                #g-skateboard-laptop p {
+                    font-family:Phosphate;
+                    font-weight:700;
+                    line-height:20px;
+                    opacity:1;
+                    letter-spacing:0em;
+                    font-size:17px;
+                    text-align:left;
+                    color:rgb(255,255,255);
+                    text-transform:none;
+                    padding-bottom:0;
+                    padding-top:0;
+                    mix-blend-mode:normal;
+                    font-style:normal;
+                    height:auto;
+                    position:static;
+                }
+                #g-skateboard-laptop .g-pstyle0 {
+                    font-size:13px;
+                    text-align:right;
+                }
+                #g-skateboard-laptop .g-pstyle1 {
+                    text-align:right;
+                }
+                #g-skateboard-laptop .g-cstyle0 {
+                    font-size:17px;
+                }
+                #g-skateboard-mobile {
+                    position:relative;
+                    overflow:hidden;
+                }
+                #g-skateboard-mobile p {
+                    font-family:Phosphate;
+                    font-weight:700;
+                    line-height:16px;
+                    opacity:1;
+                    letter-spacing:0em;
+                    font-size:13px;
+                    text-align:left;
+                    color:rgb(255,255,255);
+                    text-transform:none;
+                    padding-bottom:0;
+                    padding-top:0;
+                    mix-blend-mode:normal;
+                    font-style:normal;
+                    height:auto;
+                    position:static;
+                }
+                #g-skateboard-mobile .g-pstyle0 {
+                    font-size:10px;
+                    text-align:right;
+                }
+                #g-skateboard-mobile .g-pstyle1 {
+                    text-align:right;
+                }
+                #g-skateboard-mobile .g-cstyle0 {
+                    font-size:13px;
+                }
+            
+            </style>
+            
+            <div id="g-skateboard-box" class="ai2html">
+            
+                <!-- Artboard: medium -->
+                <div id="g-skateboard-medium" class="g-artboard" style="width:620px; height:419px;" data-aspect-ratio="1.48" data-min-width="620">
+            <div style=""></div>
+                    <img id="g-skateboard-medium-img" class="g-skateboard-medium-img g-aiImg" alt="" src="skateboard-medium.png"/>
+                    <div id="g-ai0-1" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:-4.6241%;margin-top:-34.6px;left:24.0576%;width:382px;">
+                        <p class="g-pstyle0">full-size (620px)</p>
+                    </div>
+                    <div id="g-ai0-2" class="g-ai2html-settings g-aiAbs" style="top:21.0024%;right:82.0779%;width:16.9355%;">
+                        <p class="g-pstyle1"><span class="g-cstyle0">Grip Tape </span>(goes here)</p>
+                    </div>
+                    <div id="g-ai0-3" class="g-ai2html-settings g-aiAbs" style="top:34.6062%;right:0.9129%;width:14.0323%;">
+                        <p class="g-pstyle2">The Deck</p>
+                    </div>
+                    <div id="g-ai0-4" class="g-ai2html-settings g-aiAbs" style="top:46.0621%;right:80.8581%;width:15.4839%;">
+                        <p class="g-pstyle2">The Truck</p>
+                    </div>
+                    <div id="g-ai0-5" class="g-ai2html-settings g-aiAbs" style="top:74.9403%;right:76.4123%;width:15.4839%;">
+                        <p class="g-pstyle2">The Wheel</p>
+                    </div>
+                    <div id="g-ai0-6" class="g-ai2html-settings g-aiAbs" style="top:76.3723%;right:5.4445%;width:24.8387%;">
+                        <p class="g-pstyle2">The Bearings</p>
+                    </div>
+                </div>
+            
+                <!-- Artboard: laptop -->
+                <div id="g-skateboard-laptop" class="g-artboard" style="width:490px; height:350px;" data-aspect-ratio="1.4" data-min-width="490" data-max-width="619">
+            <div style=""></div>
+                    <img id="g-skateboard-laptop-img" class="g-skateboard-laptop-img g-aiImg" alt="" src="skateboard-laptop.png"/>
+                    <div id="g-ai1-1" class="g-ai2html-settings g-aiAbs" style="top:20.8571%;right:81.3934%;width:16.5306%;">
+                        <p class="g-pstyle0"><span class="g-cstyle0">Grip Tape </span>(goes here)</p>
+                    </div>
+                    <div id="g-ai1-2" class="g-ai2html-settings g-aiAbs" style="top:34.2857%;right:2.0508%;width:13.6735%;">
+                        <p class="g-pstyle1">The Deck</p>
+                    </div>
+                    <div id="g-ai1-3" class="g-ai2html-settings g-aiAbs" style="top:46%;right:80.2099%;width:15.102%;">
+                        <p class="g-pstyle1">The Truck</p>
+                    </div>
+                    <div id="g-ai1-4" class="g-ai2html-settings g-aiAbs" style="top:75.4286%;right:75.8629%;width:15.102%;">
+                        <p class="g-pstyle1">The Wheel</p>
+                    </div>
+                    <div id="g-ai1-5" class="g-ai2html-settings g-aiAbs" style="top:76.8571%;right:6.4358%;width:24.2857%;">
+                        <p class="g-pstyle1">The Bearings</p>
+                    </div>
+                </div>
+            
+                <!-- Artboard: mobile -->
+                <div id="g-skateboard-mobile" class="g-artboard" style="max-width: 375px;max-height: 471px" data-aspect-ratio="0.797" data-min-width="0" data-max-width="489">
+            <div style="padding: 0 0 125.5467% 0;"></div>
+                    <img id="g-skateboard-mobile-img" class="g-skateboard-mobile-img g-aiImg" alt="" src="skateboard-mobile.png"/>
+                    <div id="g-ai2-1" class="g-ai2html-settings g-aiAbs" style="top:33.3475%;right:81.53%;width:16.5333%;">
+                        <p class="g-pstyle0"><span class="g-cstyle0">Grip Tape </span>(goes here)</p>
+                    </div>
+                    <div id="g-ai2-2" class="g-ai2html-settings g-aiAbs" style="top:40.9941%;right:2.0246%;width:13.6%;">
+                        <p class="g-pstyle1">The Deck</p>
+                    </div>
+                    <div id="g-ai2-3" class="g-ai2html-settings g-aiAbs" style="top:47.791%;right:80.2437%;width:15.2%;">
+                        <p class="g-pstyle1">The Truck</p>
+                    </div>
+                    <div id="g-ai2-4" class="g-ai2html-settings g-aiAbs" style="top:64.3585%;right:75.8841%;width:15.2%;">
+                        <p class="g-pstyle1">The Wheel</p>
+                    </div>
+                    <div id="g-ai2-5" class="g-ai2html-settings g-aiAbs" style="top:65.2082%;right:6.3988%;width:24.2667%;">
+                        <p class="g-pstyle1">The Bearings</p>
+                    </div>
+                </div>
+            
+            </div>
+
+
+
+
+
+
+        </div>
+        </div>
+    </div>
+
+    <div class="story-body">
+        <p class="body-text cursive">In addition to the videos produced by sponsorship companies, and as things are in the digital age, skateboarders also regularly turn to social media to promote their partnerships. In many cases, when coming across a skateboarder's page on Instagram, you would be remiss to miss the many sponsors linked in their bio's. Take a look at the following image for clarification:</p>
+    </div>
+    <div class="chart-section">
+        <div class="chart-row">
+          <div class="chart">
+            <style media="screen,print">
+                #g-screenshot-box ,
+                #g-screenshot-box .g-artboard {
+                    margin:0 auto;
+                }
+                #g-screenshot-box p {
+                    margin:0;
+                }
+                #g-screenshot-box .g-aiAbs {
+                    position:absolute;
+                }
+                #g-screenshot-box .g-aiImg {
+                    position:absolute;
+                    top:0;
+                    display:block;
+                    width:100% !important;
+                }
+                #g-screenshot-box .g-aiSymbol {
+                    position: absolute;
+                    box-sizing: border-box;
+                }
+                #g-screenshot-box .g-aiPointText p { white-space: nowrap; }
+                #g-screenshot-medium {
+                    position:relative;
+                    overflow:hidden;
+                }
+                #g-screenshot-laptop {
+                    position:relative;
+                    overflow:hidden;
+                }
+                #g-screenshot-mobile {
+                    position:relative;
+                    overflow:hidden;
+                }
+            
+            </style>
+            
+            <div id="g-screenshot-box" class="ai2html">
+            
+                <!-- Artboard: medium -->
+                <div id="g-screenshot-medium" class="g-artboard" style="width:620px; height:400px;" data-aspect-ratio="1.55" data-min-width="620">
+            <div style=""></div>
+                    <img id="g-screenshot-medium-img" class="g-screenshot-medium-img g-aiImg" alt="" src="screenshot-medium.jpg"/>
+                </div>
+            
+                <!-- Artboard: laptop -->
+                <div id="g-screenshot-laptop" class="g-artboard" style="width:490px; height:315px;" data-aspect-ratio="1.556" data-min-width="490" data-max-width="619">
+            <div style=""></div>
+                    <img id="g-screenshot-laptop-img" class="g-screenshot-laptop-img g-aiImg" alt="" src="screenshot-laptop.jpg"/>
+                </div>
+            
+                <!-- Artboard: mobile -->
+                <div id="g-screenshot-mobile" class="g-artboard" style="max-width: 375px;max-height: 245px" data-aspect-ratio="1.532" data-min-width="0" data-max-width="489">
+            <div style="padding: 0 0 65.28% 0;"></div>
+                    <img id="g-screenshot-mobile-img" class="g-screenshot-mobile-img g-aiImg" alt="" src="screenshot-mobile.jpg"/>
+                </div>
+            
+            </div>
+    
+            </div>
+        </div>
+    </div>
+    <div class="story-body">
+        <p class="body-text cursive">In addition to the videos produced by sponsorship companies, and as things are in the digital age, skateboarders also regularly turn to social media to promote their partnerships. In many cases, when coming across a skateboarder's page on Instagram, you would be remiss to miss the many sponsors linked in their bio's. Take a look at the following image for clarification:</p>
+    </div>
+    <div class="chart-section">
+        <div class="chart-row">
+          <div class="chart">
+            <style media="screen,print">
+                #g-chart1-box ,
+                #g-chart1-box .g-artboard {
+                    margin:0 auto;
+                }
+                #g-chart1-box p {
+                    margin:0;
+                }
+                #g-chart1-box .g-aiAbs {
+                    position:absolute;
+                }
+                #g-chart1-box .g-aiImg {
+                    position:absolute;
+                    top:0;
+                    display:block;
+                    width:100% !important;
+                }
+                #g-chart1-box .g-aiSymbol {
+                    position: absolute;
+                    box-sizing: border-box;
+                }
+                #g-chart1-box .g-aiPointText p { white-space: nowrap; }
+                #g-chart1-medium {
+                    position:relative;
+                    overflow:hidden;
+                }
+                #g-chart1-medium p {
+                    font-family:Phosphate;
+                    font-weight:700;
+                    line-height:24px;
+                    opacity:1;
+                    letter-spacing:0em;
+                    font-size:12px;
+                    text-align:left;
+                    color:rgb(0,0,0);
+                    text-transform:none;
+                    padding-bottom:0;
+                    padding-top:0;
+                    mix-blend-mode:normal;
+                    font-style:normal;
+                    height:auto;
+                    position:static;
+                }
+                #g-chart1-medium .g-pstyle0 {
+                    text-align:center;
+                }
+                #g-chart1-medium .g-cstyle0 {
+                    font-size:20px;
+                }
+                #g-chart1-laptop {
+                    position:relative;
+                    overflow:hidden;
+                }
+                #g-chart1-laptop p {
+                    font-family:Phosphate;
+                    font-weight:700;
+                    line-height:24px;
+                    opacity:1;
+                    letter-spacing:0em;
+                    font-size:12px;
+                    text-align:left;
+                    color:rgb(0,0,0);
+                    text-transform:none;
+                    padding-bottom:0;
+                    padding-top:0;
+                    mix-blend-mode:normal;
+                    font-style:normal;
+                    height:auto;
+                    position:static;
+                }
+                #g-chart1-laptop .g-pstyle0 {
+                    text-align:center;
+                }
+                #g-chart1-laptop .g-cstyle0 {
+                    font-size:20px;
+                }
+                #g-chart1-mobile {
+                    position:relative;
+                    overflow:hidden;
+                }
+                #g-chart1-mobile p {
+                    font-family:Phosphate;
+                    font-weight:700;
+                    line-height:24px;
+                    opacity:1;
+                    letter-spacing:0em;
+                    font-size:12px;
+                    text-align:left;
+                    color:rgb(0,0,0);
+                    text-transform:none;
+                    padding-bottom:0;
+                    padding-top:0;
+                    mix-blend-mode:normal;
+                    font-style:normal;
+                    height:auto;
+                    position:static;
+                }
+                #g-chart1-mobile .g-pstyle0 {
+                    text-align:center;
+                }
+                #g-chart1-mobile .g-cstyle0 {
+                    font-size:20px;
+                }
+            
+            </style>
+            
+            <div id="g-chart1-box" class="ai2html">
+            
+                <!-- Artboard: medium -->
+                <div id="g-chart1-medium" class="g-artboard" style="width:620px; height:338px;" data-aspect-ratio="1.834" data-min-width="620">
+            <div style=""></div>
+                    <img id="g-chart1-medium-img" class="g-chart1-medium-img g-aiImg" alt="" src="chart1-medium.png"/>
+                    <div id="g-ai0-1" class="g-ai2html-settings g-aiAbs" style="top:33.1361%;left:39.3254%;margin-left:-6.2097%;width:12.4194%;">
+                        <p class="g-pstyle0"><span class="g-cstyle0">45 </span>Accounts do <span class="g-cstyle0">NOT</span> have Sponsporship Information</p>
+                    </div>
+                    <div id="g-ai0-2" class="g-ai2html-settings g-aiAbs" style="top:33.1361%;left:60.7746%;margin-left:-6.2097%;width:12.4194%;">
+                        <p class="g-pstyle0"><span class="g-cstyle0">55 </span>Accounts have Sponsporship Information</p>
+                    </div>
+                </div>
+            
+                <!-- Artboard: laptop -->
+                <div id="g-chart1-laptop" class="g-artboard" style="width:490px; height:350px;" data-aspect-ratio="1.4" data-min-width="490" data-max-width="619">
+            <div style=""></div>
+                    <img id="g-chart1-laptop-img" class="g-chart1-laptop-img g-aiImg" alt="" src="chart1-laptop.png"/>
+                    <div id="g-ai1-1" class="g-ai2html-settings g-aiAbs" style="top:33.7143%;left:36.9015%;margin-left:-7.8571%;width:15.7143%;">
+                        <p class="g-pstyle0"><span class="g-cstyle0">45 </span>Accounts do <span class="g-cstyle0">NOT</span> have Sponsporship Information</p>
+                    </div>
+                    <div id="g-ai1-2" class="g-ai2html-settings g-aiAbs" style="top:33.7143%;left:63.6332%;margin-left:-7.8571%;width:15.7143%;">
+                        <p class="g-pstyle0"><span class="g-cstyle0">55 </span>Accounts have Sponsporship Information</p>
+                    </div>
+                </div>
+            
+                <!-- Artboard: mobile -->
+                <div id="g-chart1-mobile" class="g-artboard" style="max-width: 375px;max-height: 471px" data-aspect-ratio="0.797" data-min-width="0" data-max-width="489">
+            <div style="padding: 0 0 125.5467% 0;"></div>
+                    <img id="g-chart1-mobile-img" class="g-chart1-mobile-img g-aiImg" alt="" src="chart1-mobile.png"/>
+                    <div id="g-ai2-1" class="g-ai2html-settings g-aiAbs" style="top:38.0204%;left:32.8847%;margin-left:-10.2667%;width:20.5333%;">
+                        <p class="g-pstyle0"><span class="g-cstyle0">45 </span>Accounts do <span class="g-cstyle0">NOT</span> have Sponsporship Information</p>
+                    </div>
+                    <div id="g-ai2-2" class="g-ai2html-settings g-aiAbs" style="top:38.0204%;left:67.814%;margin-left:-10.2667%;width:20.5333%;">
+                        <p class="g-pstyle0"><span class="g-cstyle0">55 </span>Accounts have Sponsporship Information</p>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="story-body">
+    <p class="body-text cursive">In addition to the videos produced by sponsorship companies, and as things are in the digital age, skateboarders also regularly turn to social media to promote their partnerships. In many cases, when coming across a skateboarder's page on Instagram, you would be remiss to miss the many sponsors linked in their bio's. Take a look at the following image for clarification:</p>
+    </div>
+    <div class="chart-section">
+        <div class="chart-row">
+            <div class="chart">
+                <style media="screen,print">
+                    #g-chart2-box ,
+                    #g-chart2-box .g-artboard {
+                        margin:0 auto;
+                    }
+                    #g-chart2-box p {
+                        margin:0;
+                    }
+                    #g-chart2-box .g-aiAbs {
+                        position:absolute;
+                    }
+                    #g-chart2-box .g-aiImg {
+                        position:absolute;
+                        top:0;
+                        display:block;
+                        width:100% !important;
+                    }
+                    #g-chart2-box .g-aiSymbol {
+                        position: absolute;
+                        box-sizing: border-box;
+                    }
+                    #g-chart2-box .g-aiPointText p { white-space: nowrap; }
+                    #g-chart2-medium {
+                        position:relative;
+                        overflow:hidden;
+                    }
+                    #g-chart2-medium p {
+                        font-family:Phosphate;
+                        font-weight:700;
+                        line-height:29px;
+                        opacity:1;
+                        letter-spacing:0em;
+                        font-size:16px;
+                        text-align:left;
+                        color:rgb(255,255,255);
+                        text-transform:none;
+                        padding-bottom:0;
+                        padding-top:0;
+                        mix-blend-mode:normal;
+                        font-style:normal;
+                        height:auto;
+                        position:static;
+                    }
+                    #g-chart2-medium .g-pstyle0 {
+                        text-align:center;
+                    }
+                    #g-chart2-medium .g-pstyle1 {
+                        line-height:19px;
+                        text-align:center;
+                    }
+                    #g-chart2-medium .g-cstyle0 {
+                        font-size:24px;
+                    }
+                    #g-chart2-medium .g-cstyle1 {
+                        font-weight:400;
+                    }
+                    #g-chart2-medium .g-cstyle2 {
+                        font-size:40px;
+                    }
+                    #g-chart2-laptop {
+                        position:relative;
+                        overflow:hidden;
+                    }
+                    #g-chart2-laptop p {
+                        font-family:Phosphate;
+                        font-weight:700;
+                        line-height:22px;
+                        opacity:1;
+                        letter-spacing:0em;
+                        font-size:12px;
+                        text-align:left;
+                        color:rgb(255,255,255);
+                        text-transform:none;
+                        padding-bottom:0;
+                        padding-top:0;
+                        mix-blend-mode:normal;
+                        font-style:normal;
+                        height:auto;
+                        position:static;
+                    }
+                    #g-chart2-laptop .g-pstyle0 {
+                        text-align:center;
+                    }
+                    #g-chart2-laptop .g-pstyle1 {
+                        line-height:15px;
+                        text-align:center;
+                    }
+                    #g-chart2-laptop .g-cstyle0 {
+                        font-size:18px;
+                    }
+                    #g-chart2-laptop .g-cstyle1 {
+                        font-weight:400;
+                    }
+                    #g-chart2-laptop .g-cstyle2 {
+                        font-size:30px;
+                    }
+                    #g-chart2-mobile {
+                        position:relative;
+                        overflow:hidden;
+                    }
+                    #g-chart2-mobile p {
+                        font-family:Phosphate;
+                        font-weight:700;
+                        line-height:22px;
+                        opacity:1;
+                        letter-spacing:0em;
+                        font-size:12px;
+                        text-align:left;
+                        color:rgb(255,255,255);
+                        text-transform:none;
+                        padding-bottom:0;
+                        padding-top:0;
+                        mix-blend-mode:normal;
+                        font-style:normal;
+                        height:auto;
+                        position:static;
+                    }
+                    #g-chart2-mobile .g-pstyle0 {
+                        text-align:center;
+                    }
+                    #g-chart2-mobile .g-pstyle1 {
+                        line-height:12px;
+                        font-size:10px;
+                        text-align:center;
+                    }
+                    #g-chart2-mobile .g-pstyle2 {
+                        line-height:15px;
+                        font-size:10px;
+                        text-align:center;
+                    }
+                    #g-chart2-mobile .g-cstyle0 {
+                        font-size:18px;
+                    }
+                    #g-chart2-mobile .g-cstyle1 {
+                        font-weight:400;
+                    }
+                    #g-chart2-mobile .g-cstyle2 {
+                        font-size:30px;
+                    }
+                    #g-chart2-mobile .g-cstyle3 {
+                        font-size:12px;
+                    }
+                
+                </style>
+                
+                <div id="g-chart2-box" class="ai2html">
+                
+                    <!-- Artboard: medium -->
+                    <div id="g-chart2-medium" class="g-artboard" style="width:620px; height:678px;" data-aspect-ratio="0.914" data-min-width="620">
+                <div style=""></div>
+                        <img id="g-chart2-medium-img" class="g-chart2-medium-img g-aiImg" alt="" src="chart2-medium.png"/>
+                        <div id="g-ai0-1" class="g-ai2html-settings g-aiAbs" style="top:25.5162%;left:81.8263%;margin-left:-11.2903%;width:22.5806%;">
+                            <p class="g-pstyle0"><span class="g-cstyle0">53</span> % of Accounts featured their Wheel Sponsor</p>
+                        </div>
+                        <div id="g-ai0-2" class="g-ai2html-settings g-aiAbs" style="top:25.5162%;left:17.3546%;margin-left:-11.6129%;width:23.2258%;">
+                            <p class="g-pstyle0"><span class="g-cstyle0">84</span> % of Accounts featured their Deck Sponsor</p>
+                        </div>
+                        <div id="g-ai0-3" class="g-ai2html-settings g-aiAbs" style="top:25.5162%;left:49.746%;margin-left:-11.6935%;width:23.3871%;">
+                            <p class="g-pstyle0"><span class="g-cstyle0">60</span> % of Accounts featured their Truck Sponsor</p>
+                        </div>
+                        <div id="g-ai0-4" class="g-ai2html-settings g-aiAbs" style="top:58.4071%;left:16.4644%;margin-left:-11.371%;width:22.7419%;">
+                            <p class="g-pstyle0"><span class="g-cstyle0">22</span> % of Accounts featured their Bearings Sponsor</p>
+                        </div>
+                        <div id="g-ai0-5" class="g-ai2html-settings g-aiAbs" style="top:58.4071%;left:49.9585%;margin-left:-12.8226%;width:25.6452%;">
+                            <p class="g-pstyle0"><span class="g-cstyle0">16</span>% of Accounts featured their Grip Tape Sponsor</p>
+                        </div>
+                        <div id="g-ai0-6" class="g-ai2html-settings g-aiAbs" style="top:58.4071%;left:83.3824%;margin-left:-11.371%;width:22.7419%;">
+                            <p class="g-pstyle0"><span class="g-cstyle0">49</span>% of Accounts featured their Shoe Sponsor</p>
+                        </div>
+                        <div id="g-ai0-7" class="g-ai2html-settings g-aiAbs" style="top:72.4189%;left:49.9651%;margin-left:-41.6935%;width:83.3871%;">
+                            <p class="g-pstyle1">The Average Number of Linked Sponspors per Account was      <span class="g-cstyle1">	</span><span class="g-cstyle2">5.5</span></p>
+                            <p>&nbsp;</p>
+                            <p>&nbsp;</p>
+                            <p class="g-pstyle1">In addition to the Sponspor Types above,  each account had an </p>
+                            <p>&nbsp;</p>
+                            <p class="g-pstyle1">avergae of     <span class="g-cstyle2">2.6  </span>Other accounts Linked</p>
+                        </div>
+                    </div>
+                
+                    <!-- Artboard: laptop -->
+                    <div id="g-chart2-laptop" class="g-artboard" style="width:490px; height:514.5px;" data-aspect-ratio="0.952" data-min-width="490" data-max-width="619">
+                <div style=""></div>
+                        <img id="g-chart2-laptop-img" class="g-chart2-laptop-img g-aiImg" alt="" src="chart2-laptop.png"/>
+                        <div id="g-ai1-1" class="g-ai2html-settings g-aiAbs" style="top:25.2672%;left:18.8287%;margin-left:-11.1224%;width:22.2449%;">
+                            <p class="g-pstyle0"><span class="g-cstyle0">84</span> % of Accounts featured their Deck Sponsor</p>
+                        </div>
+                        <div id="g-ai1-2" class="g-ai2html-settings g-aiAbs" style="top:25.2672%;left:49.8377%;margin-left:-11.2245%;width:22.449%;">
+                            <p class="g-pstyle0"><span class="g-cstyle0">60</span> % of Accounts featured their Truck Sponsor</p>
+                        </div>
+                        <div id="g-ai1-3" class="g-ai2html-settings g-aiAbs" style="top:25.2672%;left:80.5016%;margin-left:-10.8163%;width:21.6327%;">
+                            <p class="g-pstyle0"><span class="g-cstyle0">53</span> % of Accounts featured their Wheel Sponsor</p>
+                        </div>
+                        <div id="g-ai1-4" class="g-ai2html-settings g-aiAbs" style="top:58.1147%;left:18.0045%;margin-left:-10.9184%;width:21.8367%;">
+                            <p class="g-pstyle0"><span class="g-cstyle0">22</span> % of Accounts featured their Bearings Sponsor</p>
+                        </div>
+                        <div id="g-ai1-5" class="g-ai2html-settings g-aiAbs" style="top:58.1147%;left:50.0097%;margin-left:-10.9184%;width:21.8367%;">
+                            <p class="g-pstyle0"><span class="g-cstyle0">16</span>% of Accounts featured their Grip Tape Sponsor</p>
+                        </div>
+                        <div id="g-ai1-6" class="g-ai2html-settings g-aiAbs" style="top:58.1147%;left:82.015%;margin-left:-10.9184%;width:21.8367%;">
+                            <p class="g-pstyle0"><span class="g-cstyle0">49</span>% of Accounts featured their Shoe Sponsor</p>
+                        </div>
+                        <div id="g-ai1-7" class="g-ai2html-settings g-aiAbs" style="top:73.0807%;left:49.9826%;margin-left:-39.898%;width:79.7959%;">
+                            <p class="g-pstyle1">The Average Number of Linked Sponspors per Account was<span class="g-cstyle1">        </span><span class="g-cstyle2">5.5</span></p>
+                            <p>&nbsp;</p>
+                            <p>&nbsp;</p>
+                            <p class="g-pstyle1">In addition to the Sponspor Types above,  each account had an</p>
+                            <p>&nbsp;</p>
+                            <p class="g-pstyle1"> avergae of      <span class="g-cstyle2">2.6    </span>Other accounts Linked</p>
+                        </div>
+                    </div>
+                
+                    <!-- Artboard: mobile -->
+                    <div id="g-chart2-mobile" class="g-artboard" style="max-width: 375px;max-height: 900px" data-aspect-ratio="0.417" data-min-width="0" data-max-width="489">
+                <div style="padding: 0 0 240.08% 0;"></div>
+                        <img id="g-chart2-mobile-img" class="g-chart2-mobile-img g-aiImg" alt="" src="chart2-mobile.png"/>
+                        <div id="g-ai2-1" class="g-ai2html-settings g-aiAbs" style="top:3.7765%;left:69.3355%;margin-left:-14.5333%;width:29.0667%;">
+                            <p class="g-pstyle0"><span class="g-cstyle0">84</span> % of Accounts featured their Deck Sponsor</p>
+                        </div>
+                        <div id="g-ai2-2" class="g-ai2html-settings g-aiAbs" style="top:17.2165%;left:71.4614%;margin-left:-14.6667%;width:29.3333%;">
+                            <p class="g-pstyle0"><span class="g-cstyle0">60</span> % of Accounts featured their Truck Sponsor</p>
+                        </div>
+                        <div id="g-ai2-3" class="g-ai2html-settings g-aiAbs" style="top:30.7675%;left:72.9125%;margin-left:-14.1333%;width:28.2667%;">
+                            <p class="g-pstyle0"><span class="g-cstyle0">53</span> % of Accounts featured their Wheel Sponsor</p>
+                        </div>
+                        <div id="g-ai2-4" class="g-ai2html-settings g-aiAbs" style="top:44.2075%;left:72.1709%;margin-left:-14.2667%;width:28.5333%;">
+                            <p class="g-pstyle0"><span class="g-cstyle0">22</span> % of Accounts featured their Bearings Sponsor</p>
+                        </div>
+                        <div id="g-ai2-5" class="g-ai2html-settings g-aiAbs" style="top:57.5364%;left:70.7706%;margin-left:-14.2667%;width:28.5333%;">
+                            <p class="g-pstyle0"><span class="g-cstyle0">16</span>% of Accounts featured their Grip Tape Sponsor</p>
+                        </div>
+                        <div id="g-ai2-6" class="g-ai2html-settings g-aiAbs" style="top:70.8653%;left:70.0704%;margin-left:-14.2667%;width:28.5333%;">
+                            <p class="g-pstyle0"><span class="g-cstyle0">49</span>% of Accounts featured their Shoe Sponsor</p>
+                        </div>
+                        <div id="g-ai2-7" class="g-ai2html-settings g-aiAbs" style="top:81.7505%;left:50%;margin-left:-50%;width:100%;">
+                            <p class="g-pstyle1">The Average Number of Linked Sponspors per Account waS<span class="g-cstyle1">        </span><span class="g-cstyle2">5.5</span></p>
+                            <p>&nbsp;</p>
+                            <p>&nbsp;</p>
+                            <p class="g-pstyle1">In addition to the Sponspors above,  each account had an avergae of<span class="g-cstyle3">    </span></p>
+                            <p>&nbsp;</p>
+                            <p class="g-pstyle2"><span class="g-cstyle3">    </span><span class="g-cstyle2">2.6  </span>Other accounts Linked</p>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="story-body">
+        <p class="body-text cursive">In addition to the videos produced by sponsorship companies, and as things are in the digital age, skateboarders also regularly turn to social media to promote their partnerships. In many cases, when coming across a skateboarder's page on Instagram, you would be remiss to miss the many sponsors linked in their bio's. Take a look at the following image for clarification:</p>
+        </div>
+    </body>
+</html>
